@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useAuth } from '@/lib/AuthContext'
 import { supabase } from '@/lib/supabase'
-import { SchedulingSlot, Instructor, Profile } from '@/types'
+import { SchedulingSlot, Instructor } from '@/types'
 import { formatDate, formatTime, getEndTime, extractTime } from '@/lib/timeUtils'
 import { useNavigate } from 'react-router-dom'
 

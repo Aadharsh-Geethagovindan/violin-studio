@@ -5,7 +5,7 @@ import { Instructor, SchedulingSlot } from '@/types'
 import SchedulingCalendar from '@/components/SchedulingCalendar'
 import TimeSlotPicker from '@/components/TimeSlotPicker'
 import InstructorAvailabilityManager from '@/components/InstructorAvailabilityManager'
-import { createTimeSlot, getDateKey, extractDatePrefix, extractTime } from '@/lib/timeUtils'
+import {getDateKey, extractDatePrefix, extractTime } from '@/lib/timeUtils'
 import { useNavigate } from 'react-router-dom'
 
 export default function Schedule() {

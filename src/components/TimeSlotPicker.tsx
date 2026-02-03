@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { SchedulingSlot } from '@/types'
-import { TIME_SLOTS, formatTime, formatTimeRange, getEndTime, isConsecutiveSlot, extractTime } from '@/lib/timeUtils'
+import { TIME_SLOTS,  formatTimeRange, getEndTime, isConsecutiveSlot, extractTime } from '@/lib/timeUtils'
 interface TimeSlotPickerProps {
   date: Date
   instructorId: string
@@ -12,7 +12,6 @@ interface TimeSlotPickerProps {
 
 export default function TimeSlotPicker({
   date,
-  instructorId,
   slots,
   onBook,
   onClose,

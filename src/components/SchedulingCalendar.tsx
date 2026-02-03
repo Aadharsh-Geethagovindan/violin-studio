@@ -12,8 +12,7 @@ interface SchedulingCalendarProps {
 export default function SchedulingCalendar({
   selectedDate,
   onDateSelect,
-  slots,
-  viewMode
+  slots
 }: SchedulingCalendarProps) {
   const [currentMonth, setCurrentMonth] = useState(new Date())
   const [days, setDays] = useState<Date[]>([])
@@ -74,7 +73,7 @@ export default function SchedulingCalendar({
     const isPast = date < today
     const isToday = isSameDay(date, today)
     const isSelected = selectedDate && isSameDay(date, selectedDate)
-    const availability = getAvailabilityForDate(date)
+    //const availability = getAvailabilityForDate(date)
     const isSelectable = isWithinNextMonth(date)
 
     let classes = 'relative aspect-square p-2 rounded-lg transition-all border-2 '
