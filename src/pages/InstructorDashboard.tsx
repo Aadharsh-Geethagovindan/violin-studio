@@ -4,6 +4,7 @@ import { supabase } from '@/lib/supabase'
 import { SchedulingSlot, Instructor } from '@/types'
 import { formatDate, formatTime, getEndTime, extractTime } from '@/lib/timeUtils'
 import { useNavigate } from 'react-router-dom'
+import UserManagement from '@/components/UserManagement'
 
 interface SlotWithDetails extends SchedulingSlot {
   student_name?: string
@@ -275,6 +276,12 @@ export default function InstructorDashboard() {
             )}
           </div>
         </div>
+         {/* User Management Section - Admin Only */}
+        {profile?.role === 'admin' && (
+          <div className="mt-8">
+            <UserManagement />
+          </div>
+        )}
       </div>
     </div>
   )
